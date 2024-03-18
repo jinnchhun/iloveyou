@@ -3,69 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H4CK3RZ R US</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #0F0;
-            font-family: monospace;
-            text-align: center;
-            padding-top: 50px;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .terminal {
-            background-color: #111;
-            color: #0F0;
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid #0F0;
-            margin: 0 auto;
-            max-width: 600px;
-        }
-        .input {
-            color: #0FF;
-        }
-        .output {
-            color: #0F0;
-        }
-    </style>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <h1>HACKER YOUR DEVICE</h1>
-    <div class="terminal">
-        <p>Welcome to Theanlay hacker terminal.</p>
-        <p class="output">Initializing...</p>
-        <p class="input">Enter command: YES or NO</p>
-        <p class="output">hacker your device <span id="command"></span></p>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('+')">+</button>
+        </div>
     </div>
-
-    <script>
-        const terminal = document.querySelector('.terminal');
-        const commandSpan = document.getElementById('command');
-
-        // Simulate terminal input/output
-        function simulateTerminal() {
-            setTimeout(() => {
-                terminal.querySelector('.output').textContent = 'Connected to mainframe.';
-            }, 1000);
-
-            setTimeout(() => {
-                terminal.querySelector('.output').textContent = 'Running decryption algorithm...';
-            }, 2000);
-
-            setTimeout(() => {
-                terminal.querySelector('.output').textContent = 'Access granted. Welcome, hacker.';
-            }, 3000);
-        }
-
-        simulateTerminal();
-    </script>
+    <script src="js.js"></script>
 </body>
 </html>
