@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4CK3RZ R US</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0F0;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .terminal {
+            background-color: #111;
+            color: #0F0;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #0F0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .input {
+            color: #0FF;
+        }
+        .output {
+            color: #0F0;
+        }
+    </style>
+</head>
+<body>
+    <h1>HACKER YOUR DEVICE</h1>
+    <div class="terminal">
+        <p>Welcome to Theanlay hacker terminal.</p>
+        <p class="output">Initializing...</p>
+        <p class="input">Enter command: YES or NO</p>
+        <p class="output">hacker your device <span id="command"></span></p>
+    </div>
+
+    <script>
+        const terminal = document.querySelector('.terminal');
+        const commandSpan = document.getElementById('command');
+
+        // Simulate terminal input/output
+        function simulateTerminal() {
+            setTimeout(() => {
+                terminal.querySelector('.output').textContent = 'Connected to mainframe.';
+            }, 1000);
+
+            setTimeout(() => {
+                terminal.querySelector('.output').textContent = 'Running decryption algorithm...';
+            }, 2000);
+
+            setTimeout(() => {
+                terminal.querySelector('.output').textContent = 'Access granted. Welcome, hacker.';
+            }, 3000);
+        }
+
+        simulateTerminal();
+    </script>
+</body>
+</html>
